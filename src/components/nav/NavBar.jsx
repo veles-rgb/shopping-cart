@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from '../nav/NavBar.module.css';
 import { FaSearch } from 'react-icons/fa';
+import { GrCart } from 'react-icons/gr';
 
 const NavBar = () => {
   return (
@@ -24,7 +25,9 @@ const NavBar = () => {
           <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
-          <NavLink to="/cart">Cart</NavLink>
+          <NavLink to="/cart">
+            <GrCart />
+          </NavLink>
         </li>
       </ul>
     </nav>
