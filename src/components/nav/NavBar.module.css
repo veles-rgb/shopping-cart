@@ -84,6 +84,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.nav a svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
 .nav :global(.active) {
     background-color: white;
     color: black;
