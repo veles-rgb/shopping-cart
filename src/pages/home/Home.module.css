@@ -1,0 +1,49 @@
+.page {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.content h1 {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content button {
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    color: white;
+    background-color: black;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
