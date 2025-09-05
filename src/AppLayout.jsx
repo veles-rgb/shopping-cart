@@ -1,19 +1,21 @@
 import { Outlet } from 'react-router-dom';
+import styles from './AppLayout.module.css';
 import NavBar from './components/nav/NavBar';
+import Footer from './components/footer/Footer';
 
 export default function AppLayout() {
   return (
-    <div>
+    <div className={styles.layout}>
       <header>
         <NavBar />
       </header>
 
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
 
-      <footer>
-        <small>© Shopping Cart Project</small>
+      <footer className={styles.footer}>
+        <Footer />
       </footer>
     </div>
   );
