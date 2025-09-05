@@ -1,13 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router';
-import '../nav/NavBar.module.css';
+import { NavLink } from 'react-router-dom';
+import styles from '../nav/NavBar.module.css';
+import { FaSearch } from 'react-icons/fa';
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <h1>VelesShop</h1>
-      <input type="search" name="" id="" />
-      <ul>
+      <div className={styles.search}>
+        <input className={styles.input} type="search" placeholder="SEARCH" />
+        <button
+          className={styles.searchButton}
+          type="button"
+          aria-label="Search"
+        >
+          <FaSearch />
+        </button>
+      </div>
+      <ul className={styles.ul}>
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
