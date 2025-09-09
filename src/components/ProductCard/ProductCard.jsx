@@ -1,14 +1,17 @@
 import styles from './ProductCard.module.css';
 import { FaCartPlus } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const ProductCard = ({ title, image, price }) => {
+const ProductCard = ({ title, image, price, id }) => {
   return (
     <div className={styles.card}>
       <img src={image} alt="" />
       <h2>{title}</h2>
-      <p>{price}</p>
+      <strong>${price}</strong>
       <div>
-        <button>View</button>
+        <button>
+          <Link to={`/shop/products/${id}`}>View</Link>
+        </button>
         <button>
           <FaCartPlus />
         </button>
