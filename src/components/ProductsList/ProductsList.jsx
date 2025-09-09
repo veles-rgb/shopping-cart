@@ -27,6 +27,7 @@ const ProductsList = () => {
     <div className={styles.grid}>
       {products.map((product) => (
         <ProductCard
+          id={product.id}
           key={product.id}
           title={product.title}
           image={product.image}
