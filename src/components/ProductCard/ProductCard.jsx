@@ -1,8 +1,9 @@
 import styles from './ProductCard.module.css';
 import { FaCartPlus } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 const ProductCard = ({ title, image, price, id }) => {
+  const { addToCart } = useOutletContext();
   return (
     <div className={styles.card}>
       <img src={image} alt="" />
@@ -12,7 +13,7 @@ const ProductCard = ({ title, image, price, id }) => {
         <button>
           <Link to={`/shop/products/${id}`}>View</Link>
         </button>
-        <button>
+        <button onClick={() => addToCart({ id, title, image, price })}>
           <FaCartPlus />
         </button>
       </div>
