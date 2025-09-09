@@ -3,7 +3,8 @@ import styles from '../nav/NavBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 import { GrCart } from 'react-icons/gr';
 
-const NavBar = () => {
+const NavBar = ({ cart }) => {
+  const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
   return (
     <nav className={styles.nav}>
       <h1>VelesShop</h1>
@@ -27,6 +28,7 @@ const NavBar = () => {
         <li>
           <NavLink to="/cart">
             <GrCart />
+            {cartCount}
           </NavLink>
         </li>
       </ul>
