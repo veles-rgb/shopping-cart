@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router';
 import styles from './Home.module.css';
-import hero from '/src/assets/hero.jpg';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -10,7 +9,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.page} style={{ backgroundImage: `url(${hero})` }}>
+    <div className={styles.page}>
       <div className={styles.overlay} />
       <div className={styles.content}>
         <h1>Welcome to VelesShop</h1>
