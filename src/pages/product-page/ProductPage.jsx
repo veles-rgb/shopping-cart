@@ -24,10 +24,10 @@ export default function ProductPage() {
       .finally(() => setLoading(false));
   }, [productId]);
 
-  if (!product)
-    return <div className={styles.noProduct}>Product Not Found</div>;
   if (loading) return <div className={styles.loading}>Loading…</div>;
   if (error) return <div className={styles.error}>Error: {error.message}</div>;
+  if (!product)
+    return <div className={styles.noProduct}>Product Not Found</div>;
 
   return (
     <div>
