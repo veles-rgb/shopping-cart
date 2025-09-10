@@ -1,8 +1,53 @@
-.small a {
+:root {
+    --accent: rgb(31, 23, 75);
+}
+
+.footer {
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
-    color: white;
-    font-size: 1.2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.link:hover {
+    color: #d1d5db;
+    transform: translateY(-1px);
+}
+
+.copy {
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .link {
+        font-size: 0.95rem;
+    }
+
+    .copy {
+        font-size: 0.75rem;
+    }
 }
