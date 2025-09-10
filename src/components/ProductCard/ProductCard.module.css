@@ -15,7 +15,7 @@
 }
 
 .card:hover {
-    border: 2px solid rgb(125, 0, 145);
+    border: 3px solid rgb(31, 23, 75);
 }
 
 .card img {
@@ -55,7 +55,7 @@
 }
 
 .buttons button:hover {
-    border: 2px solid rgb(125, 0, 145);
+    border: 3px solid rgb(31, 23, 75);
     cursor: pointer;
 }
 
