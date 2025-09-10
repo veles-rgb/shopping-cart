@@ -4,18 +4,21 @@
     justify-items: center;
     align-items: start;
     gap: 0.5rem;
+
     width: 250px;
     height: 300px;
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 1px 1px 10px 0px #000000;
-    background-color: white;
-    color: black;
-    position: relative;
+    background: #fff;
+    color: #111827;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    border: 1px solid transparent;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
 }
 
 .card:hover {
-    border: 3px solid rgb(31, 23, 75);
+    border-color: rgb(31, 23, 75);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
 }
 
 .card img {
@@ -39,26 +42,67 @@
 
 .price {
     font-weight: 900;
+    color: rgb(31, 23, 75);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.buttons {
+.actions {
     display: flex;
     gap: 0.5rem;
 }
 
-.buttons button {
-    width: 4rem;
+.view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 2rem;
-    background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 0.9rem;
+    border-radius: 0.35rem;
+    border: 1px solid rgb(31, 23, 75);
+    background: #fff;
+    color: rgb(31, 23, 75);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 120ms ease, color 120ms ease, transform 120ms ease;
 }
 
-.buttons button:hover {
-    border: 3px solid rgb(31, 23, 75);
+.view:hover {
+    background: #f5f6fa;
+}
+
+.view:focus-visible {
+    outline: 2px solid rgb(31, 23, 75);
+    outline-offset: 2px;
+}
+
+.add {
+    height: 2rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.35rem;
+    border: 1px solid rgb(31, 23, 75);
+    background: rgb(31, 23, 75);
+    color: #fff;
     cursor: pointer;
+    transition: filter 120ms ease, transform 120ms ease;
 }
 
-.card a {
-    color: black;
+.add:hover {
+    filter: brightness(1.1);
+}
+
+.add:active {
+    transform: translateY(1px);
+}
+
+.add:focus-visible {
+    outline: 2px solid rgb(31, 23, 75);
+    outline-offset: 2px;
+}
+
+.add svg {
+    width: 1.1rem;
+    height: 1.1rem;
 }
