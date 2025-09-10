@@ -20,11 +20,12 @@ const ProductsList = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className={styles.loading}>Loading…</div>;
-  if (error) return <div className={styles.error}>Error: {error.message}</div>;
+  if (loading) return <div className={styles.centerState}>Loading…</div>;
+  if (error)
+    return <div className={styles.centerState}>Error: {error.message}</div>;
 
   return (
-    <>
+    <section className={styles.wrapper}>
       <h1 className={styles.title}>Our Products</h1>
       <div className={styles.grid}>
         {products.map((product) => (
@@ -38,7 +39,7 @@ const ProductsList = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
