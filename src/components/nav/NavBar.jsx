@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import styles from '../nav/NavBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 import { GrCart } from 'react-icons/gr';
@@ -36,7 +36,11 @@ const NavBar = ({ cart }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/cart" className={`${styles.link} ${styles.cartLink}`}>
+          <NavLink
+            to="/cart"
+            aria-label="Cart"
+            className={`${styles.link} ${styles.cartLink}`}
+          >
             <GrCart />
             <span className={styles.badge}>{cartCount}</span>
           </NavLink>
