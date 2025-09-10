@@ -24,18 +24,21 @@ const ProductsList = () => {
   if (error) return <div className={styles.error}>Error: {error.message}</div>;
 
   return (
-    <div className={styles.grid}>
-      {products.map((product) => (
-        <ProductCard
-          id={product.id}
-          key={product.id}
-          title={product.title}
-          image={product.image}
-          price={product.price}
-          description={product.description}
-        />
-      ))}
-    </div>
+    <>
+      <h1 className={styles.title}>Our Products</h1>
+      <div className={styles.grid}>
+        {products.map((product) => (
+          <ProductCard
+            id={product.id}
+            key={product.id}
+            title={product.title}
+            image={product.image}
+            price={product.price}
+            description={product.description}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
