@@ -1,19 +1,64 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 125px auto auto auto;
+    justify-items: center;
+    align-items: start;
+    gap: 0.5rem;
     width: 250px;
     height: 300px;
-    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px 0px #000000;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+
+.card:hover {
+    border: 2px solid rgb(125, 0, 145);
 }
 
 .card img {
     width: 125px;
     height: 125px;
+    object-fit: contain;
 }
 
 .card h2 {
     font-size: 1rem;
     text-align: center;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 2.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price {
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buttons button {
+    width: 4rem;
+    height: 2rem;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttons button:hover {
+    border: 2px solid rgb(125, 0, 145);
+    cursor: pointer;
+}
+
+.card a {
+    color: black;
 }
