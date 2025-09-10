@@ -6,6 +6,13 @@
     margin: 2rem;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .loading,
 .error {
     position: absolute;
