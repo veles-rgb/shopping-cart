@@ -1,10 +1,14 @@
+:root {
+    --accent: rgb(31, 23, 75);
+}
+
 .layout {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
-    overflow: hidden;
-    background-color: black;
-    color: white;
+    min-height: 100svh;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 header,
@@ -16,9 +20,9 @@ footer {
     flex: 1;
     min-height: 0;
     position: relative;
-    overflow: hidden;
-    background-color: white;
-    color: black;
+    overflow: auto;
+    background-color: #fff;
+    color: #000;
 }
 
 .footer {
@@ -28,6 +32,7 @@ footer {
     width: 100%;
     height: 3.5rem;
     font-weight: 900;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
 }
