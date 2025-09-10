@@ -1,13 +1,18 @@
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router';
 import styles from '../nav/NavBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 import { GrCart } from 'react-icons/gr';
 
 const NavBar = ({ cart }) => {
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
+
   return (
     <nav className={styles.nav}>
-      <h1>VelesShop</h1>
+      <Link to="/" className={styles.brandLink}>
+        <h1 className={styles.brand}>VelesShop</h1>
+      </Link>
+
       <div className={styles.search}>
         <input className={styles.input} type="search" placeholder="SEARCH" />
         <button
@@ -18,17 +23,22 @@ const NavBar = ({ cart }) => {
           <FaSearch />
         </button>
       </div>
+
       <ul className={styles.ul}>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className={styles.link}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/shop">Shop</NavLink>
+          <NavLink to="/shop" className={styles.link}>
+            Shop
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/cart">
+          <NavLink to="/cart" className={`${styles.link} ${styles.cartLink}`}>
             <GrCart />
-            {cartCount}
+            <span className={styles.badge}>{cartCount}</span>
           </NavLink>
         </li>
       </ul>
