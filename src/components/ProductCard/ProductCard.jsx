@@ -8,8 +8,8 @@ const ProductCard = ({ title, image, price, id }) => {
     <div className={styles.card}>
       <img src={image} alt="" />
       <h2>{title}</h2>
-      <strong>${price}</strong>
-      <div>
+      <strong className={styles.price}>${price}</strong>
+      <div className={styles.buttons}>
         <button>
           <Link to={`/shop/products/${id}`}>View</Link>
         </button>
