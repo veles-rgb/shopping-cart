@@ -17,7 +17,7 @@ describe('NavBar', () => {
     expect(screen.getByRole('link', { name: /^cart$/i })).toBeInTheDocument();
   });
 
-  it('shows the total cart quantity in the Cart link', () => {
+  it('shows the total cart quantity in the Cart icon', () => {
     const cart = [
       { id: 1, title: 'A', qty: 2, price: 10, image: '' },
       { id: 2, title: 'B', qty: 3, price: 5, image: '' },
