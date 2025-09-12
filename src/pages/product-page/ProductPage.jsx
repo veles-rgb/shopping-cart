@@ -78,7 +78,9 @@ export default function ProductPage() {
             >
               Add to Cart
             </button>
-            <button className={styles.buy}>Buy Now</button>
+            <button type="button" disabled className={styles.buy}>
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
