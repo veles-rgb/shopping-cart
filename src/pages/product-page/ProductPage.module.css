@@ -138,6 +138,7 @@
 .buy {
     background: #fff;
     color: rgb(31, 23, 75);
+    cursor: not-allowed;
 }
 
 .buy:hover {
